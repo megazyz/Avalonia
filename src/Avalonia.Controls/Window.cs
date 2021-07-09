@@ -926,7 +926,7 @@ namespace Avalonia.Controls
         /// <inheritdoc/>
         protected sealed override void HandleResized(Size clientSize)
         {
-            if (!AutoSizing)
+            if (!AutoSizing && clientSize != ClientSize)
             {
                 SizeToContent = SizeToContent.Manual;
             }
